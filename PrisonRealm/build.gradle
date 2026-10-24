@@ -1,3 +1,4 @@
+
 plugins {
     id 'java'
 }
@@ -7,7 +8,9 @@ version = '1.0.0'
 
 repositories {
     mavenCentral()
-    maven { url = 'https://repo.papermc.io/repository/maven-public/' }
+    maven {
+        url = 'https://repo.papermc.io/repository/maven-public/'
+    }
 }
 
 dependencies {
@@ -16,11 +19,13 @@ dependencies {
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
+        languageVersion = JavaLanguageVersion.of(25)
     }
+    sourceCompatibility = JavaVersion.VERSION_25
+    targetCompatibility = JavaVersion.VERSION_25
 }
 
- tasks.withType(JavaCompile).configureEach {
+tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
-    options.release = 21
+    options.release = 25
 }
