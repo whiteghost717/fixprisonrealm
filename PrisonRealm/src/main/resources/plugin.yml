@@ -1,0 +1,30 @@
+name: PrisonRealm
+version: '1.0.0'
+main: com.rosey.prisonrealm.PrisonRealmPlugin
+api-version: '26.2'
+author: Rosey
+description: Craftable Prison Realm item with owner-only sealing and release.
+commands:
+  prisonrealm:
+    description: Prison Realm admin and status commands.
+    usage: /prisonrealm <give|status|sealed|release|reload>
+    aliases: [prison]
+  freeze:
+    description: Starts the 60-second Prison Realm sealing window for a nearby target.
+    usage: /freeze <player>
+  seal:
+    description: Seal a frozen player using a placed Prison Realm.
+    usage: /seal <player>
+  unseal:
+    description: Release a player you sealed.
+    usage: /unseal <player>
+  player:
+    description: Prison Realm player commands.
+    usage: /player seal
+permissions:
+  prisonrealm.admin:
+    description: Administer Prison Realm.
+    default: op
+  prisonrealm.use:
+    description: Use the Prison Realm sealing mechanics.
+    default: true

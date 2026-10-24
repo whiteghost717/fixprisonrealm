@@ -1,0 +1,11 @@
+item:
+  name: "&5&lPrison Realm"
+  lore:
+    - "&7A cursed sealing object."
+    - "&dOnly the sealer can release their prisoner."
+  custom-model-data: 26001
+  glow: true
+sealing:
+  window-seconds: 60
+  target-distance: 1.5
+  freeze-window-on-disconnect: true
